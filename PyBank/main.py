@@ -19,9 +19,8 @@ stored_val = 0
 greatest_inc = 0
 greatest_dec = 0
 
-#"/Users/kelseytraeger/Documents/python-challenge/PyBank/Resources/budget_data.csv"
-#csvpath = os.path.join("Resources", "budget_data.csv")
-with open("/Users/kelseytraeger/Documents/python-challenge/PyBank/Resources/budget_data.csv", "r") as csv_file: 
+csvpath = os.path.join("Resources", "budget_data.csv")
+with open(csvpath, "r") as csv_file: 
     csv_reader = csv.reader(csv_file)
 
     #Skip headers 
@@ -53,9 +52,8 @@ with open("/Users/kelseytraeger/Documents/python-challenge/PyBank/Resources/budg
     date_inc = date_list[difference_list.index(greatest_inc)]
     date_dec = date_list[difference_list.index(greatest_dec)]
 
-#"/Users/kelseytraeger/Documents/python-challenge/PyBank/Analysis/Financial_Analysis.txt"
-#txtpath = os.path.join("Analysis", "Financial_Analysis.txt")
-file = open("/Users/kelseytraeger/Documents/python-challenge/PyBank/Analysis/Financial_Analysis.txt", "x")
+txtpath = os.path.join("Analysis", "Financial_Analysis.txt")
+file = open(txtpath, "x")
 file.write(f"Financial Analysis \n")
 file.write(f"Total Months: {num_months}\n")
 file.write(f"Total: ${profit_loss_count}\n")
