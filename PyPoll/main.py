@@ -12,9 +12,8 @@ percentage_votes = 0
 #Source: https://docs.python.org/3/library/collections.html 
 candidate_votes_dict = collections.Counter()
 
-#"/Users/kelseytraeger/Documents/python-challenge/PyBank/Resources/budget_data.csv"
-#csvpath = os.path.join("Resources", "budget_data.csv")
-with open("/Users/kelseytraeger/Documents/python-challenge/PyPoll/Resources/election_data.csv", "r") as csv_file: 
+csvpath = os.path.join("Resources", "election_data.csv")
+with open(csvpath, "r") as csv_file: 
     csv_reader = csv.reader(csv_file)
 
     #Skip headers 
@@ -30,9 +29,9 @@ for value in candidate_votes_dict.values():
     #Calculates the total votes from dictionary
     total_vote += value
 
-#"/Users/kelseytraeger/Documents/python-challenge/PyBank/Analysis/Election_Results.txt"
-#txtpath = os.path.join("Analysis", "Election_Results.txt")
-file = open("/Users/kelseytraeger/Documents/python-challenge/PyPoll/Analysis/Election_Results.txt", "x")
+#Opens a text file
+txtpath = os.path.join("Analysis", "Election_Results.txt")
+file = open(txtpath, "x")
 
 #Outputs
 print(f"Election Results")
